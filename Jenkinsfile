@@ -28,9 +28,10 @@ pipeline {
  
         stage('Upload in s3'){
             steps{
-                withEnv(["ENV_NAME=${params.EnvironmentName}"]){
-                    sh "make upload-jar"
-                }
+                withAWS(region:'ap-south-1') {
+                  sh 'echo "Uploading content with AWS creds"'
+                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'target/hello-lambda-function.jar', bucket:'hellotrupti')
+                  }
             }
         }
     }
