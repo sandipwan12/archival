@@ -11,7 +11,7 @@ endif
 S3UPLOAD_PLAYBOOK=upload-jar.yml
  
 setup-environment: check-env
-    rm -rf wis-archive-env-config-$(ENV_NAME)
+    rm -rf hello-env-config-config-$(ENV_NAME)
     git clone https://github.com/sandipwan12/hello-env-config-$(ENV_NAME).git
  
 upload-jar: setup-environment
