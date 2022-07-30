@@ -17,7 +17,7 @@ pipeline {
                         ])
                     }
                     withMaven(
-                        maven: 'Default Maven',
+                        maven: 'maven',
                         mavenLocalRepo: '.localRepo',
                         mavenSettingsFilePath: 'maven_settings.xml')
                         {
