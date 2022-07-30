@@ -30,7 +30,7 @@ pipeline {
             steps{
                 withAWS(region:'ap-south-1') {
                   sh 'echo "Uploading content with AWS creds"'
-                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'target/hello-lambda-function.jar', bucket:'hellotrupti')
+                      s3Upload(s3upload: true, payloadSigningEnabled: true, file:'target/hello-lambda-function.jar', bucket:'hellotrupti')
                   }
             }
         }
