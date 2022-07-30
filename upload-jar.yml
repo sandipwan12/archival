@@ -10,6 +10,5 @@
         object: "lambda/hello-lambda.jar"
         src: "target/hello-lambda-function.jar"
         mode: put
-        encrypt: yes
-        encryption_mode: aws:kms
+        encrypt: no
         region: "ap-south-1"
