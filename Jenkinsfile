@@ -29,7 +29,7 @@ pipeline {
         stage('Upload in s3'){
             steps{
                 withEnv(["ENV_NAME=${params.EnvironmentName}"]){
-                    sh "makefile upload-jar"
+                    sh "make upload-jar"
                 }
             }
         }
