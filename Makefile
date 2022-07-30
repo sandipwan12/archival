@@ -22,4 +22,4 @@ S3UPLOAD_PLAYBOOK=upload-jar.yml
 #                 git clone git@github.aus.thenational.com:wis-ansible/wis-archive-env-config-$(ENV_NAME).git
  
 upload-jar: setup-environment
-    $(PLAYBOOK) $(PLAYBOOK_DEBUG) -i inventory $(S3UPLOAD_PLAYBOOK)
+    $(PLAYBOOK) $(PLAYBOOK_DEBUG) -i /inventory $(S3UPLOAD_PLAYBOOK)
