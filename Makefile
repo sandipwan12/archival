@@ -1,7 +1,14 @@
 # commands
 ANSIBLE=ansible
 PLAYBOOK=ansible-playbook
- 
+
+## set debug var
+PLAYBOOK_DEBUG ?= 
+## set ansible debug mode on if the DEBUG var is passed in
+ifdef DEBUG
+PLAYBOOK_DEBUG = -vvvv
+endif
+
 check-env:
 ifndef ENV_NAME
     $(error ENV_NAME is undefined)
