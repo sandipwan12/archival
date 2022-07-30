@@ -14,5 +14,5 @@ setup-environment: check-env
     # rm -rf hello-env-config-$(ENV_NAME)
     git clone https://github.com/sandipwan12/hello-env-config-$(ENV_NAME).git
 
-upload-jar: setup-environment
-    $(PLAYBOOK) $(PLAYBOOK_DEBUG) $(S3UPLOAD_PLAYBOOK)
+upload-jar: setup-environment   
+    $(S3UPLOAD_PLAYBOOK)
