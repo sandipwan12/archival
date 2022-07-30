@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        jdk 'OpenJDK-9.0.4'
+        jdk 'oracle jdk'
     }
     stages {
         stage('Build') {
