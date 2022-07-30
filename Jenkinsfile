@@ -16,13 +16,13 @@ pipeline {
                             ])
                         ])
                     }
-                    withMaven(
-                        maven: 'maven',
-                        mavenLocalRepo: '.localRepo',
-                        mavenSettingsFilePath: 'maven_settings.xml')
-                        {
-                                sh "mvn clean package"
-                        }
+            withMaven(
+                 maven: 'maven',
+                 mavenLocalRepo: '.localRepo',
+                 mavenSettingsFilePath: 'maven_settings.xml')
+                 {
+                        sh "mvn clean package"
+                 }
             }
         }
  
