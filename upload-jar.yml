@@ -1,0 +1,15 @@
+- name: This playbook is used to zip and upload the code in the s3 bucket
+  hosts: localhost
+  connection: local
+  gather_facts: false
+ 
+  tasks:
+    - name: Copy the compiled jar to the s3 bucket
+      aws_s3:
+        bucket: "hellotrupti"
+        object: "lambda/hello-lambda.jar"
+        src: "target/hello-lambda-function.jar"
+        mode: put
+        encrypt: yes
+        encryption_mode: aws:kms
+        region: "ap-south-1"
