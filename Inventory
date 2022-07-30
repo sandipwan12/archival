@@ -1,0 +1,15 @@
+[local]
+base_host ansible_host=localhost
+ 
+[tooling_infra]
+tooling_host ansible_host=localhost
+ 
+[toolingdomain]
+ 
+[tooling:children]
+tooling_infra
+toolingdomain
+ 
+[localonly:children]
+local
+tooling_infra
