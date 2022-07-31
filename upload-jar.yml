@@ -1,5 +1,5 @@
 - name: This playbook is used to zip and upload the code in the s3 bucket
-  var:
+  vars:
       ansible_python_interpreter: /usr/bin/python3
   hosts: localhost
   connection: local
