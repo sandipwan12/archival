@@ -1,5 +1,5 @@
 # commands
-ANSIBLE=ansible
+ANSIBLE=ansible2
 PLAYBOOK=ansible-playbook
  
 check-env:
