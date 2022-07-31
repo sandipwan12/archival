@@ -2,7 +2,8 @@
   hosts: localhost
   connection: local
   gather_facts: false
- 
+  vars: 
+    ansible_python_interpreter=/usr/bin/python3
   tasks:
     - name: Copy the compiled jar to the s3 bucket
       aws_s3:
