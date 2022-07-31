@@ -1,5 +1,5 @@
 # commands
-ANSIBLE=ansible2
+ANSIBLE=ansible
 PLAYBOOK=ansible-playbook
  
 check-env:
@@ -15,4 +15,4 @@ setup-environment: check-env
     git clone https://github.com/sandipwan12/hello-env-config-$(ENV_NAME).git
 
 upload-jar: setup-environment
-    $(PLAYBOOK) $(S3UPLOAD_PLAYBOOK)
+    $(PLAYBOOK) $(PLAYBOOK_DEBUG) -i hello-env-config-$(ENV_NAME)/inventory $(S3UPLOAD_PLAYBOOK)
