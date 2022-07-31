@@ -28,7 +28,7 @@ pipeline {
  
         stage('Upload in s3'){
             steps{
-                withAWS(region:'ap-south-1',credentials:'wach-jenkins-cred') {
+                withAWS(region:'ap-south-1',credentials:'s3upload') {
                   sh 'echo "Uploading content with AWS creds"'
                       s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'target/hello-lambda-function.jar', bucket:'hellotrupti')
                   }
