@@ -15,4 +15,4 @@ setup-environment: check-env
 	git clone https://github.com/sandipwan12/hello-env-config-$(ENV_NAME).git
 
 upload-jar: setup-environment
-	ansible-playbook -i hello-env-config-nonprod/inventory upload-jar.yml
+	$(PLAYBOOK) $(PLAYBOOK_DEBUG) -i hello-env-config-nonprod/inventory $(S3UPLOAD_PLAYBOOK)
